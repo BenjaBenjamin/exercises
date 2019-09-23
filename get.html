@@ -5,15 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <style>
+      #app article:nth-child(even) {
+        background-color: blue;
+      }
+      #app article:nth-child(odd) {
+        background-color: yellow;
+      }
+      * {
+        padding: 10px;
+      }
+
+      #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      article {
+        margin: 30px;
+      }
+    </style>
   </head>
   <body>
+    <button>Add hero</button>
     <div id="app"></div>
     <template>
-      <h1></h1>
-      <h2></h2>
-      <ul>
-        <li></li>
-      </ul>
+      <article>
+        <h1></h1>
+        <h2></h2>
+        <ul>
+          <li></li>
+        </ul>
+      </article>
     </template>
 
     <script src="get.js"></script>
