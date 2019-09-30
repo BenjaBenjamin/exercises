@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #app article:nth-child(even) {
+        background-image: url(baggrund.jpg);
+      }
+      #app article:nth-child(odd) {
+        background-image: url(baggrund.jpg);
+      }
+      * {
+        padding: 10px;
+      }
+
+      .notvalid {
+        border: red;
+      }
+      #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: white;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+      ul {
+        font-size: 2rem;
+      }
+
+      article {
+        margin: 30px;
+      }
+      * {
+        font-family: "Marvel", sans-serif;
+      }
+
+      .info {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .powers {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .powers input {
+        height: 1vw;
+        width: 1vw;
+      }
+
+      #others {
+        width: 20vw;
+        height: 2vw;
+      }
+
+      .choose {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .choose input {
+        height: 1vw;
+        width: 1vw;
+      }
+
+      input {
+        font-size: 2rem;
+      }
+
+      .submit {
+        font-size: 2rem;
+        position: absolute;
+        left: 35%;
+        width: 30%;
+        background-image: url(spiderman.jpg);
+        background-repeat: round;
+        height: 5vw;
+        margin-bottom: 5vw;
+        color: white;
+        font-weight: 800;
+      }
+      button:hover {
+        opacity: 0.7;
+      }
+
+      h1 {
+        font-size: 4rem;
+        text-align: center;
+        margin-top: 1vw;
+      }
+    </style>
+  </head>
+  <body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Marvel&display=swap"
+      rel="stylesheet"
+    />
+
+    <h1>Who is your favorite superhero or supervillan?</h1>
+
+    <form>
+      <section class="info">
+        <h2>Personal information</h2>
+        <label for="superheroname">Name of the hero</label>
+        <input
+          type="text"
+          name="name"
+          size="20"
+          placeholder=" e.g Superman"
+          required
+        />
+        <br />
+        <br />
+        <label for="realname">What is your hero's real name?</label>
+        <input
+          type="text"
+          name="realname"
+          placeholder=" e.g Clark Kent"
+          required
+        />
+      </section>
+      <br />
+      <br />
+
+      <section class="powers">
+        <h2>Superpowers</h2>
+        <label for="superpowers">What superpowers does your hero have?</label>
+        <br />
+        <input type="checkbox" name="power" value="Flying" />
+        <label for="Flying">Flying</label>
+        <br />
+        <input type="checkbox" name="power" value="invisibility" />
+        <label for="invisibility">invisibility</label>
+        <br />
+        <input type="checkbox" name="Super strength" />
+        <label for="Super strength">Super strength</label>
+        <br />
+        <input type="checkbox" name="Laser sight" />
+        <label for="Laser sight">Laser sight</label>
+        <br />
+        <input type="checkbox" name="Super Speed" />
+        <label for="Super Speed">Super Speed</label>
+        <br />
+        <input type="checkbox" name="Super Smart" />
+        <label for="Super Smart">Super Smart</label>
+        <br />
+        <label for="other">Other powers?</label>
+        <input type="text" name="other" size="40" id="others" />
+        <br />
+        <br />
+      </section>
+
+      <section class="choose">
+        <h2>Are your hero a superhero or a supervillan?</h2>
+        <input type="radio" id="hero" name="choose" value="hero" checked />
+        <label for="hero">Superhero!</label>
+
+        <input type="radio" id="villan" name="choose" value="villan" />
+        <label for="villan">Supervillan!</label>
+      </section>
+      <br />
+      <br />
+      <button type="submit" class="submit">submit</button>
+    </form>
+
+    <script>
+      document.querySelector("button").addEventListener("click", besked);
+      function besked() {
+        console.log(alert);
+        alert("Form has been sent!");
+      }
+    </script>
+
+    <button class="add">Add hero</button>
+    <div id="app"></div>
+    <template>
+      <article class="hero">
+        <h1></h1>
+        <h2></h2>
+        <ul>
+          <li></li>
+        </ul>
+        <button class="delete">delete me</button>
+      </article>
+    </template>
+
+    <script src="get.js"></script>
+  </body>
+</html>
